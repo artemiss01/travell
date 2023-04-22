@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230418164616">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230422144937">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,8 +36,8 @@
 						</nav>
 					</div>
 					<div data-da=".menu__body,992,2" class="header__btns">
-						<button class="header__btn-login-in btn-header">Login</button>
-						<button class="header__btn-login-out btn-header">Sign up</button>
+						<button data-popup="#popup-login" class="header__btn-login-in btn-header">Login</button>
+						<button data-popup="#popup-sign-up" class="header__btn-login-out btn-header">Sign up</button>
 					</div>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 				</div>
@@ -102,7 +102,7 @@
 					</div>
 					<form action="/" class="form-hero">
 						<div class="form-hero__row">
-							<div class="form-hero__select">
+							<div data-one-select class="form-hero__select">
 								<div class="form-hero__item">
 									<div class="form-hero__label">Destination</div>
 									<select name="form[]" class="form">
@@ -128,7 +128,7 @@
 
 								<div class="form-hero__item">
 									<div class="form-hero__label">Check in</div>
-									<select name="form[]" class="form">
+									<select data-pseudo-label="hfhfh" name="form[]" class="form">
 										<option value="1" selected>Sun, 17th Sep 2020</option>
 										<option value="2">Sun, 18th Sep 2020</option>
 										<option value="3">Sun, 18th Sep 2020</option>
@@ -759,19 +759,58 @@
 			</div>
 		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+
+	<div id="popup-sign-up" aria-hidden="true" class="popup sign-up-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<form action="#" class="popup__registration-form form-registration">
+					<label for="sign-up-login">
+						<input data-required data-validate id="sign-up-login" autocomplete="off" type="text" name="form[]" data-error="*enter your name" placeholder="Login" class="form-registration__input">
+					</label>
+
+					<label for="sign-up-email">
+						<input data-required="email" data-validate id="sign-up-email" autocomplete="off" type="email" name="form[]" data-error="*enter your email" placeholder="Email" class="form-registration__input ">
+					</label>
+
+					<label for="sign-up-pasword">
+						<input data-required data-validate id="sign-up-pasword" autocomplete="off" type="password" name="form[]" data-error="*enter your pasword" placeholder="Pasword" class="form-registration__input">
+					</label>
+
+					<label for="sign-up-policy-private">
+						<input id="sign-up-policy-private" autocomplete="off" type="checkbox" name="form[]" class="form-registration__input">
+						i agree with privacy policy
+					</label>
+
+					<button type="submit" class="form-registration__btn ">register</button>
+
+				</form>
 			</div>
 		</div>
 	</div>
-</div>
- -->
 
-	<script src="js/app.min.js?_v=20230418164616"></script>
+
+	<div id="popup-login" aria-hidden="true" class="popup sign-up-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<form action="#" class="popup__registration-form form-registration">
+					<label for="login">
+						<input data-required data-validate id="login" autocomplete="off" type="text" name="form[]" data-error="*enter your name" placeholder="Login" class="form-registration__input">
+					</label>
+
+					<label for="login-pasword">
+						<input data-required data-validate id="login-pasword" autocomplete="off" type="password" name="form[]" data-error="*enter your pasword" placeholder="Pasword" class="form-registration__input">
+					</label>
+
+					<button type="submit" class="form-registration__btn ">Login</button>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20230422144937"></script>
 </body>
 
 </html>
