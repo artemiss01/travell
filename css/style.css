@@ -182,6 +182,10 @@ h6 {
   overflow: hidden;
   touch-action: none;
 }
+.menu-open body {
+  overflow: hidden;
+  touch-action: none;
+}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -478,8 +482,8 @@ body.popup-show::after {
 
 .popup__close {
   position: absolute;
-  top: -2.1875rem;
-  right: -1.5625rem;
+  top: -1.5625rem;
+  right: -0.9375rem;
   font-size: 1.5625rem;
   color: rgb(184, 10, 10);
   background-color: transparent;
@@ -491,7 +495,7 @@ body.popup-show::after {
   justify-content: space-between;
   align-items: center;
   row-gap: 0.625rem;
-  min-height: 50vh;
+  min-height: 18.75rem;
   padding: 1.25rem;
   border: #767E86 solid 3px;
   border-radius: 6px;
